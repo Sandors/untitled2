@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 
@@ -41,3 +42,8 @@ def article_detail(requset,year,month,day):
 	ctime = now.strftime("%Y-%m-%d %X")
 
 	return render(requset,"index.html",{"ctime":ctime})
+
+def redirect_to_year(request):
+
+	year=2006
+	return  HttpResponseRedirect(reversed('news-year-archive',args=(year,)))
