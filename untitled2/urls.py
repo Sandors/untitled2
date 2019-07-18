@@ -4,7 +4,6 @@ from django.urls import path,re_path,include
 from my_first_django import views
 from django.conf.urls import url
 
-
 urlpatterns = [
 
     # re_path(r'^blog/', include('templates.urls')),
