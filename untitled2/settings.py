@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'my_first_django.apps.MyFirstDjangoConfig',
-    'book'
+    'book_app'
 ]
 
 MIDDLEWARE = [
@@ -85,8 +85,8 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         'ENGINE': 'django.db.backends.mysql',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME': 'book1',      # 要连接的数据库，连接前需要创建好
-        'USER': 'root',  # 连接数据库的用户名
+        'NAME': 'book_app',      # 要连接的数据库，连接前需要创建好
+        'USER': 'root',      # 连接数据库的用户名
         'PASSWORD': 'zxy301317',
         'HOST': '127.0.0.1',
         'PORT':3306

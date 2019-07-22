@@ -3,8 +3,8 @@
 import os
 import sys
 
-# import django
-# django.setup()
+import django
+django.setup()
 
 def main():
 
