@@ -3,9 +3,6 @@
 import os
 import sys
 
-import django
-django.setup()
-
 def main():
 
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'untitled2.settings')

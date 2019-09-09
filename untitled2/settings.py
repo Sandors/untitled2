@@ -11,9 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import pymysql
 
-pymysql.install_as_MySQLdb()
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -41,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'my_first_django.apps.MyFirstDjangoConfig',
-    'book_app'
+    "book"
 ]
 
 MIDDLEWARE = [
@@ -85,9 +82,9 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         'ENGINE': 'django.db.backends.mysql',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'NAME': 'book_app',      # 要连接的数据库，连接前需要创建好
+        'NAME': 'book',      # 要连接的数据库，连接前需要创建好
         'USER': 'root',      # 连接数据库的用户名
-        'PASSWORD': 'zxy301317',
+        'PASSWORD': '123456',
         'HOST': '127.0.0.1',
         'PORT':3306
     }
