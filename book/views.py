@@ -1,8 +1,4 @@
 from django.shortcuts import render,HttpResponse,redirect
-
-# Create your views here.
-# from book.models import Book_test
-from django.shortcuts import HttpResponse
 from book.models import Book
 
 def addbook(request):
@@ -12,7 +8,7 @@ def addbook(request):
 		publish=request.POST.get('publish')
 		date=request.POST.get('date')
 		book_obj=Book.objects.create(title=title,price=price,publish=publish,pub_date=date)
-		return redirect('/books/')
+		return redirect('/index/')
 	return render(request,'addbook.html')
 
 def changebook(request,id):
@@ -24,7 +20,7 @@ def changebook(request,id):
 		date=request.POST.get('date')
 		Book.objects.filter(id=id).update(title=title,price=price,publish=publish,pub_date=date)
 
-		return redirect('/books/')
+		return redirect('/index/')
 
 	return render(request,'changebook.html',{"book_obj":book_obj})
 
@@ -37,4 +33,4 @@ def delbook(request,id):
 
 	Book.objects.filter(id=id).delete()
 
-	return redirect('/books/')
+	return redirect('/index/')
