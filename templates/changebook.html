@@ -18,7 +18,7 @@
 </head>
 <body>
 
-<h3 class="check">添加页面</h3>
+<h3 class="check">编辑页面</h3>
 <div class="container">
     <div class="row">
         <div class="col-lg-6 col-md-offset-3">
@@ -26,19 +26,19 @@
                 {% csrf_token %}
                 <div>
                     <lable for="">书籍名称</lable>
-                    <input type="text" class="form-control" name="title">
+                    <input type="text" class="form-control" name="title" value="{{ book_obj.title }}">
                 </div>
                 <div>
                     <lable for="">价格</lable>
-                    <input type="text" class="form-control" name="price">
+                    <input type="text" class="form-control" name="price" value="{{ book_obj.price }}">
                 </div>
                 <div>
                     <lable for="">出版社</lable>
-                    <input type="text" class="form-control" name="publish">
+                    <input type="text" class="form-control" name="publish" value="{{ book_obj.publish }}">
                 </div>
                 <div>
                     <lable for="">出版日期</lable>
-                    <input type="date" class="form-control" name="date">
+                    <input type="date" class="form-control" name="date" value="{{ book_obj.pub_date|date:'Y-m-d' }}">
                 </div>
 
                 <input type="submit" class="btn btn-success pull-right">

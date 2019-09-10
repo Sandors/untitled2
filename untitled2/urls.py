@@ -8,6 +8,9 @@ urlpatterns = [
 
     # path(r'index/',views.index),
     path(r'addbook/',views.addbook),
+    path(r'books/',views.books),
+    re_path(r'books/(\d+)/delete',views.delbook),
+    re_path(r'books/(\d+)/change',views.changebook),
 
 ]
 
